@@ -1,0 +1,55 @@
+	<main style="margin-left: 300px">
+		<div class="section no-pad-bot" id="index-banner" style="background-color: #6833FF;padding-bottom: 20px  ">
+        	<div class="container">
+        		<div class="center-align"><h1 style="color: white" >Some Name</h1></div>
+        		<div class="center-align"><h6 style="color: white">GeekInterview.com is an Open Database where you can share interview questions, comment / answer any questions.</h6></div>
+        		<%if !user_signed_in?%>
+        		<div class="center-align"><a class="waves-effect waves-light btn" src=<%=link_to "GET STARTED", new_user_session_path,:method => :get%></div>
+				<%end%>
+        	</div>
+               
+        </div>
+                 <div class="container center-align">
+                                <ul style="display: flex;margin-top: 60px;margin-bottom: 60px" class="center-align">
+                                      <li><img src="/images/facebook.png" style="width: 120px;height: 100px"></li>
+                                      <li><img src="/images/amazon.png" style="width: 120px;height: 100px"></li>
+                                      <li><img src="/images/google.png" style="width: 120px;height: 100px"></li>
+                                      <li><img src="/images/adobe.png" style="width: 120px;height: 100px"></li> 
+                                      <li><img src="/images/microsoft.png" style="width: 120px;height: 100px"></li> 
+                                      <li><img src="/images/apple.png" style="width: 120px;height: 100px"></li> 
+                                </ul>
+                                <p class="center-align" style="margin-bottom: 60px;margin-top: 60px"><h3 style="color:#6833FF">We help you achieve your dream job</h3></p>
+                                <div class="center-align" style="display: flex;margin-top:60px">
+                                        <div style="margin-right: 105px">
+                                                <i class="large material-icons">insert_chart</i>
+
+                                                <h4>Suscribe</h4>
+                                                <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                                                "There is no one who loves pain itself, 
+                                                who seeks after it and wants to have it,
+                                                 simply because it is pain..."</p>
+                                        </div>
+                                         <div style="margin-right: 105px">
+                                                <i class="large material-icons">group</i>
+
+                                                <h4>Discussion</h4>
+                                                 <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                                                "There is no one who loves pain itself, 
+                                                who seeks after it and wants to have it,
+                                                 simply because it is pain..."</p>
+                                        </div>
+                                         <div>
+                                                <i class="large material-icons">trending_down</i>
+
+                                                <h4>Performance Monitor</h4>
+                                                 <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                                                "There is no one who loves pain itself, 
+                                                who seeks after it and wants to have it,
+                                                 simply because it is pain..."</p>
+                                        </div>
+
+                                </div>
+                                <div class="center-align" style="margin-bottom: 60px"><a class="waves-effect waves-light btn" src=<%=link_to "SUSCRIBE", new_user_session_path,:method => :get%></div>
+                                
+                </div>
+	</main>

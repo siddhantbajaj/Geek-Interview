@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <script src="https://use.fontawesome.com/2c09b7e045.js"></script>
+  <title>GeekInterview</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+		<ul  class="side-nav fixed ">
+		 
+           
+            <li class="collection-item center-align" style="height: 256px;width: 256px;overflow: hidden "><img src="/images/geek.png"></li>
+          <li><a href="/">About</a></li>
+	      <li><%=link_to "Company tags", companies_path,:method => :get%></li>
+	      <li><%=link_to "Algo tags", problems_path,:method => :get%></li>
+	      <%if user_signed_in?%>
+	      <li><%=link_to "sign out",destroy_user_session_path,method: :delete%></li>
+		  <%end%>
+		  <%if !user_signed_in?%>
+	      <li><%=link_to "sign in",new_user_session_path,method: :get%></li>
+		  <%end%>
+	     
+	    </ul>
+	</header>
+
+
+<%= yield %>
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</body>
+</html>

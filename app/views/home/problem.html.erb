@@ -1,0 +1,43 @@
+<main style="margin-left: 300px">
+		<div class="section no-pad-bot" id="index-banner" style="background-color: #6833FF;padding-bottom: 20px  ">
+        	<div class="container">
+        		<div class="center-align"><h1 style="color: white" >Some Name</h1></div>
+        		<div class="center-align"><h6 style="color: white">GeekInterview.com is an Open Database where you can share interview questions, comment / answer any questions.</h6></div>
+        		<%if !user_signed_in?%>
+        		<div class="center-align"><a class="waves-effect waves-light btn" src=<%=link_to "GET STARTED", new_user_session_path,:method => :get%></div>
+			<%end%>
+        	</div>
+                </div>
+                <div class="container">
+                 <ul class="collection with-header">
+                        <%@problem.matters.all.each do |matter|%>
+                       
+                            <li class="collection-item" >
+                                <div class="card" style="min-height: 250px">
+                                  
+                                  <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4"><%=matter.name%><i class="material-icons right">more_vert</i></span>
+
+                                    <p>Click Above to view Question</p>
+                                  </div>
+                                  <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4"><%=matter.name%><i class="material-icons right">close</i></span>
+                                    <p><%=matter.content%></p>
+                                  </div>
+
+                                  <div class="card-action">
+                                    <%matter.companies.each do |c|%>
+                                    <div class="chip"><%=c.name%></div>
+                                    <%end%>
+                                    <div style="height: 10px"></div>
+                                    <%matter.problems.each do |c|%>
+                                    <div class="chip"><%=c.name%></div>
+                                    <%end%>
+
+                                  </div>
+                                </div>
+                            </li>
+                        <%end%>
+                </ul>
+                </div>
+</main>
